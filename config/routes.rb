@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  devise_for :users
 resources :restaurants do
   resources :reviews
 end
@@ -10,7 +11,7 @@ end
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root to: 'restaurants#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
